@@ -1,0 +1,148 @@
+/* right column in music literacy tab (widget) */
+.column {
+    font-size: 1.75rem;
+}
+
+#staff_pictures {
+    text-align: center;
+}
+
+/* all buttons and timer on music literacy page */
+.console {
+    margin: 20px;
+    text-align: center;
+    background-color: #DDDDDD;
+    border: #000000;
+    border-radius: 20px;
+    padding: 15px;
+    font-weight: 300;
+}
+
+/* note buttons on music literacy page */
+.note_buttons {
+    margin: 10px;
+    background-color: #DDDDDD;
+    border: #000000;
+    border-radius: 5px;
+    padding: 15px;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* timer on music literacy page */
+.score {
+    margin: 10px;
+    text-align: center;
+    /* background-color: #FFFFFF; */
+}
+
+#stopwatch {
+    font-family: monospace;
+}
+
+/* all buttons in music literacy console */
+.console_button {
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    color: #000000;
+    background-color: #FFFFFF;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: 65px;
+    height: 75px;
+}
+
+/* start and stop buttons in music literacy console */
+.start_stop {
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    color: #000000;
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: 100px;
+}
+
+/* hover attribute of all buttons on music literacy page */
+button:hover {
+    background-color: #F3F3F3;
+}
+
+/* depressed attribute of all buttons on music literacy page */
+button:active {
+    background-color: #D0D0D0;
+}
+
+/* treble and bass clef labels for toggle switch */
+#clef_marking {
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+  /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #ccc;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #ccc;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

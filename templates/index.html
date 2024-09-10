@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+    <div class="container-sm">
+        <div class="column">
+            <div id="flashcard_image">
+                <img width="300" height="450" alt="Blank Treble Clef Staff" src="static/staff_pictures/treble_clef/empty.png" id="staff_pictures">
+            </div>
+            <div class="console">
+                <div class="note_buttons">
+                    <button class="console_button" id="A_button">A</button>
+                    <button class="console_button" id="B_button">B</button>
+                    <button class="console_button" id="C_button">C</button>
+                    <button class="console_button" id="D_button">D</button>
+                    <button class="console_button" id="E_button">E</button>
+                    <button class="console_button" id="F_button">F</button>
+                    <button class="console_button" id="G_button">G</button>
+                </div>
+                <button id="start_button" class="start_stop">start</button>
+                <button id="stop_button" class="start_stop">stop</button>
+                <div id="stopwatch" class="score">
+                    00:00:00
+                </div>
+                <div id="notes_identified" class="score">
+                    correct: 0
+                </div>
+                <div id="incorrect_tally" class="score">
+                    incorrect: 0
+                </div>
+                <div id="score" class="score">
+                    score: 0
+                </div>
+            </div>
+        </div>
+        <div id="clef_marking">
+        treble clef
+            <label id="clef_switch" class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        bass clef
+        </div>
+    </div>
+
+    <!-- flashcard Javascript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <!-- HTML and CSS for toggle switch adapted from w3schools, https://www.w3schools.com/howto/howto_css_switch.asp -->
+
+{% endblock %}

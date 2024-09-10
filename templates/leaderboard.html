@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Leaderboard
+{% endblock %}
+
+{% block main %}
+
+    <main class="container py-5 text-center">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-start">Username</th>
+                    <th class="text-start">Score</th>
+                    <th class="text-start">Date and time</th>
+                    <th class="text-start">Notes identified</th>
+                    <th class="text-start">Average seconds-per-note</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in high_scores %}
+                <tr>
+                    <td class="text-start">{{ row.username }}</td>
+                    <td class="text-start">{{ row.score }}</td>
+                    <td class="text-start">{{ row.timestamp }}</td>
+                    <td class="text-start">{{ row.correct }}</td>
+                    <td class="text-start">{{ row.sec_per_note }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+
+{% endblock %}
